@@ -1,18 +1,3 @@
-class constructorInheritance{
-    constructorInheritance(){
-        System.out.println("myClass");
-    }
-    public static void main(String args[]){
-        C obj = new C();
-        obj.i=1;
-        obj.j=2;
-        obj.k=3;
-        obj.showi();
-        obj.showj();
-        obj.showk();
-        
-    } 
-}
 class A{
     int i;
     A(){
@@ -39,4 +24,20 @@ class C extends B{
     void showk(){
         System.out.println(k);
     }
+}
+class constructorInheritance{
+    constructorInheritance(){
+        System.out.println("myClass");
+    }
+    public static void main(String args[]){
+        new constructorInheritance();         //This leads to the execution of the main class constructor first 
+        C obj = new C();                      //C extends B which inturn extends A, thereofore the order of execution of constructors is from first parent to last child
+        obj.i=1;
+        obj.j=2;
+        obj.k=3;
+        obj.showi();
+        obj.showj();
+        obj.showk();
+        
+    } 
 }

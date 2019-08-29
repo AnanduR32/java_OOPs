@@ -1,5 +1,5 @@
 class Person{
-    Person(String n,String g,int a){
+    Person(String n,String g,int a){  //This class doesn't get additional details like salary and company information
         name=n;
         gender=g;
         age=a;
@@ -10,7 +10,7 @@ class Person{
         System.out.println("Name = "+name+"\nGender = "+gender+"\nAge = "+age);
     }
 }
-class Company extends Person{
+class Company extends Person{   //This class doesn't get additional details like salary 
     String company;
     Company(String n,String g,int a, String c){
         super(n, g, a);
@@ -20,7 +20,7 @@ class Company extends Person{
         System.out.println("Company = "+company);
     }
 }
-class Salary extends Company{
+class Salary extends Company{     //This class recieves all relavent details that concern the salary details of an employee
     int salary;
     Salary(String n,String g,int a, String c, int s){
         super(n, g, a, c);
